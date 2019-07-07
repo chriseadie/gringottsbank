@@ -1,0 +1,23 @@
+{
+  "name": "gringottsbank",
+  "version": "1.0.0",
+  "description": "digital bank for wizards witches and muggles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriseadie/gringottsbank.git"
+  },
+  "author": "Christopher Eadie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chriseadie/gringottsbank/issues"
+  },
+  "homepage": "https://github.com/chriseadie/gringottsbank#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.0"
+  }
+}
