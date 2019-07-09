@@ -1,4 +1,4 @@
-# gringottsbank
+# Gringotts Digital Bank
 
 ## Todo
 
