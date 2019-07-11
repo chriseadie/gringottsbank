@@ -1,0 +1,35 @@
+{% extends '../shared/layout.njk' %}
+
+{% block content %}
+<div class="blog-container">
+    <div class="row">
+        <div class="col-md-3">
+            <div>
+                <div class="search-container">
+                    <div class="form-group">
+                        <input type="text" class="blog-search-input" placeholder="Search the archives..."/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="blog-post-container">
+                {% for item in blog %}
+                    <div class="blog-post-card">
+                        <div class="post-meta-data d-flex justify-content-between">
+                            <div>Author: {{item.author}}</div>
+                            <div>Time to read: {{item.readTime}}</div>
+                        </div>
+                        <div class="post-title">
+                            <h4>{{item.title}}</h4>
+                        </div>
+                        <div class="post-description">
+                            {{item.shortDesc}}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
