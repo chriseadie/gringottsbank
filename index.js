@@ -4,6 +4,7 @@ const nunjucks = require("nunjucks");
 
 const HomeController = require("./Controllers/HomeController.js");
 const BankingController = require("./Controllers/BankingController.js");
+const ApiBridgeController = require('./Controllers/ApiBridge.js')
 
 app.use(express.static("Assets"));
 nunjucks.configure("./Views", {
@@ -14,6 +15,7 @@ nunjucks.configure("./Views", {
 
 app.use("/", HomeController);
 app.use("/bank", BankingController);
+app.use('/ApiBridge',ApiBridgeController)
 
 app.listen(8080, null, () => {
   console.log("Port launched on 8080");
