@@ -13,5 +13,11 @@ nunjucks.configure("Views", {
 router.get("/", (req, res) => {
   res.send("This is the Banking Section");
 });
+router.get("/dashboard", (req, res) => {
+  if (req.session.jwt) {
+    return res.render("./Banking/index.njk");
+  }
+  return res.redirect("/");
+});
 
 module.exports = router;

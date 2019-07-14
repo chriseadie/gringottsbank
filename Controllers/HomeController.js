@@ -13,6 +13,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/dailyprofit", (req, res) => {
+  console.log(req.session);
   fs.readFile("./LocalData/BlogPostsMock.json", (err, data) => {
     if (err) {
       console.log(err);

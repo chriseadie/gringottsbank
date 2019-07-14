@@ -92,8 +92,11 @@ p {
   justify-content: center;
   align-items: center;
 }
-.login-card .form-group {
+.login-form {
   width: 70%;
+}
+.login-card .form-group {
+  width: 100%;
   margin-bottom: 0px;
 }
 .login-card .form-group .login-label {
@@ -108,7 +111,7 @@ p {
   height: 2rem;
 }
 .login-card .login-button-container {
-  width: 70%;
+  width: 100%;
   margin-top: 1rem;
   display: flex;
   justify-content: center;

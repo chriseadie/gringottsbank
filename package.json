@@ -19,9 +19,10 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
+    "express-session": "^1.16.2",
     "jwt-token-encrypt": "^1.0.4",
-    "node-session": "^1.2.1",
     "nunjucks": "^3.2.0"
   }
 }

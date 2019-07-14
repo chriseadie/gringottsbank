@@ -4,22 +4,19 @@
     <div class="login-wrapper">
         <div class="login-card">
             <div>Gringotts Bank</div>
-        <div class="form-group">
-            <label class="login-label">Username</label>
-            <input name="username" id="login-username" class="login-input" type="email"/>
-        </div>
-        <div class="form-group">
-            <label class="login-label">Password</label>
-            <input name="password" id="login-password" class="login-input" type="password"/>
-        </div>
-        <div class="login-button-container">
-            <button type="button" id="post-login" class="login-button">Login</button>
-        </div>
+            <form action="/auth/login" method="post" class="login-form">
+                <div class="form-group">
+                    <label class="login-label">Username</label>
+                    <input name="username" id="login-username" class="login-input" type="email"/>
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Password</label>
+                    <input name="password" id="login-password" class="login-input" type="password"/>
+                </div>
+                <div class="login-button-container">
+                    <button type="submit" id="post-login" class="login-button">Login</button>
+                </div>
+            </form>
         </div>
     </div>
-    <script src="/Javascript/login.js"></script>
-    <script>
-        var loginscript = new Login();
-        loginscript.postLogin();
-    </script>
 {% endblock %}
