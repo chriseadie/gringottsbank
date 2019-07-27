@@ -1,10 +1,1 @@
-{
-  "randomCharacter": {
-    "email": "test@test.com",
-    "password": "encryptedPassword"
-  },
-  "newRandowUser": {
-    "email": "chris.eadie@gringotts.com",
-    "password": "password"
-  }
-}
+{"randomCharacter":{"email":"test@test.com","password":"encryptedPassword"},"newRandowUser":{"email":"chris.eadie@gringotts.com","password":"password"},"newusers":{"firstName":"Christopher","surname":"Eadie","password":"password","email":"caeadie@hotmail.com"}}

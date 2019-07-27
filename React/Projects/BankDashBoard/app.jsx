@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import DashBoardContainer from "./components/dashboardcontainer.jsx";
 
-const BankDashBoard = () => {
-  return <div>The DashBoard Goes here Bitches</div>;
-};
-ReactDOM.render(<BankDashBoard />, document.getElementById("dashboardMount"));
+ReactDOM.render(
+  <DashBoardContainer />,
+  document.getElementById("dashboardMount")
+);

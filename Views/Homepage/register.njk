@@ -1,0 +1,35 @@
+{% extends '../shared/layout.njk' %}
+
+{% block content %}
+<div class="register-wrapper">
+    <div class="register-card">
+        <div class="register-title">
+            <h2>Register with Gringotts</h2>
+            <h5>The most secure bank in the wizarding world</h5>
+        </div>
+        <form action="/auth/registerNewUser" method="post" class="login-form">
+            <div class="form-group">
+                    <label class="login-label">First Name <span style="color:red">*</span></label>
+                    <input name="firstname" id="login-firstname" class="login-input" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Surname <span style="color:red">*</span></label>
+                    <input name="surname" id="login-password" class="login-input" type="text" required>
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Email <span style="color:red">*</span></label>
+                    <input name="email" id="login-email" class="login-input" type="email" required>
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Password <span style="color:red">*</span></label>
+                    <input name="password" id="login-password" class="login-input" type="password" required>
+                </div>
+                <div class="form-group">
+                    <label class="login-label">Confirm Password <span style="color:red">*</span></label>
+                    <input name="confirmPassword" id="login-password-confirm" class="login-input" type="password">
+                </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

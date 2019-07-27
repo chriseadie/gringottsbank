@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const AuthTokenHandler = require("../code/extentions.js");
 const userbank = require("../code/GetUser.js");
+const fs = require("fs");
+const allusers = require("../LocalData/login.json");
+var { newusermodel } = require("../Model/registernewusermodel");
 
 const _auth = new AuthTokenHandler();
 const _user = new userbank();
@@ -36,7 +39,29 @@ app.route("/login").post(async (req, res) => {
   res.end();
 });
 
-app.route("/testing").get(redirectLogin, (req, res) => {
-  res.send("Hi");
+app.route("/registerNewUser").post(async (req, res) => {
+  var user = req.body;
+  console.log(req.body);
+  if (
+    user.firstname.length > 0 &&
+    user.surname.length > 0 &&
+    user.email.length > 0 &&
+    user.password.length > 0
+  ) {
+    newusermodel = {
+      firstName: user.firstname,
+      surname: user.surname,
+      password: user.password,
+      email: user.email
+    };
+    var test = Object.assign(allusers, { newusers: newusermodel });
+    fs.writeFileSync("./LocalData/login.json", JSON.stringify(test), err => {
+      if (err) {
+        console.log(err);
+      }
+      res.send("New User Added");
+    });
+  }
+  res.redirect("/login");
 });
 module.exports = app;
