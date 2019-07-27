@@ -30,6 +30,6 @@ app.use("/", HomeController);
 app.use("/bank", BankingController);
 app.use("/auth", ApiBridgeController);
 
-app.listen(8080, null, () => {
-  console.log("Port launched on 8080");
+app.listen(9000, null, () => {
+  console.log("Port launched on 9000");
 });

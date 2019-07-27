@@ -1,1 +1,10 @@
-[]
+{
+  "randomCharacter": {
+    "email": "test@test.com",
+    "password": "encryptedPassword"
+  },
+  "newRandowUser": {
+    "email": "chris.eadie@gringotts.com",
+    "password": "password"
+  }
+}
