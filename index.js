@@ -19,10 +19,10 @@ app.use(
   session({
     secret: "SuperSecretKey",
     saveUninitialized: true,
-    resave: true
-    // cookie: {
-    //   maxAge: 2400000
-    // }
+    resave: true,
+    cookie: {
+      maxAge: 2400000
+    }
   })
 );
 

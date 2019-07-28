@@ -22,8 +22,10 @@ router.get("/dailyprofit", (req, res) => {
   });
 });
 
-module.exports = router;
-
 router.get("/register", (req, res) => {
   res.render("./Homepage/register.njk");
 });
+
+module.exports = router;
+
+
